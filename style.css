@@ -20,6 +20,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center; 
+    margin-left:24px ;
 }
 
 .circle{
@@ -43,4 +44,24 @@ body{
     margin-bottom: 100px;
     color: white;
 
+}
+
+@media(max-width:410px){
+    .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left:0px ;
+    }
+    .margin{
+        margin: 20px 0px;
+    }
+
+    .ap{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        color: white;
+    
+    }
 }
