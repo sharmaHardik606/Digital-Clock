@@ -1,4 +1,4 @@
-const URL = "http://worldtimeapi.org/api/timezone/Asia/Kolkata";
+const URL = "https://worldtimeapi.org/api/timezone/Asia/Kolkata";
 
 let circles = document.querySelectorAll(".circle");
 let amPm = document.querySelector(".ap");
