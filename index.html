@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
-    <div class="circle"><p id="hour">00</p><p>Hours</p></div>
-    <div class="circle margin"><p id="minute">00</p><p>Minutes</p></div>
-    <div class="circle"><p id="second">00</p><p>Seconds</p></div>
-    <div class="ap">
-        <p id="am-pm"></p>
+    <div class="supercontainer">
+        <div class="upperdiv">
+            <p id="timezone"></p>
+        </div>
+        <div class="container">
+        <div class="circle"><p id="hour">00</p><p>Hours</p></div>
+        <div class="circle margin"><p id="minute">00</p><p>Minutes</p></div>
+        <div class="circle"><p id="second">00</p><p>Seconds</p></div>
+        <div class="ap">
+            <p id="am-pm"></p>
+        </div>
+        </div>  
+        <div class="lowerdiv">
+            <p id="date"></p>
+        </div>
     </div>
-    </div>  
 </body>
 <script src="/script.js"></script>
 </html>

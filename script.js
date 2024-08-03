@@ -2,11 +2,13 @@ const URL = "http://worldtimeapi.org/api/timezone/Asia/Kolkata";
 
 let circles = document.querySelectorAll(".circle");
 let amPm = document.querySelector(".ap");
+let timeZone = document.querySelector("#timezone");
+let date = document.querySelector("#date");
+
 
 const getTime = async()=>{
  try{
     let response = await fetch(URL);
-
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -15,6 +17,18 @@ const getTime = async()=>{
     let data = await response.json();
     let datetime = data.datetime;
 
+    //timezone 
+    let timezone = data.timezone;
+    timeZone.innerText = timezone;
+
+
+    //date
+    let day = datetime;
+    day = day.slice(0,10);
+    date.innerText = day;
+
+
+    //time 
     let hour = datetime;
     hour= hour[11]+hour[12];
 
@@ -34,9 +48,7 @@ const getTime = async()=>{
     if(hour12 < 10){
         hour12 = '0' + hour12;
     }
-
-    // let {hour12} = timeFormat(hour);
-
+    
 // assigning time to circles
     document.getElementById('hour').innerText = hour12;
     document.getElementById('minute').innerText = min;
@@ -52,4 +64,3 @@ const getTime = async()=>{
 
 getTime();
 setInterval(getTime, 1000);
-
